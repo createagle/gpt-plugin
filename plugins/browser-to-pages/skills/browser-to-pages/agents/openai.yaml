@@ -1,0 +1,4 @@
+interface:
+  display_name: "网页导入 Pages"
+  short_description: "通过 Browser 批量导入网页到 GPT Pages，保留代码、图片附件并支持断点续传"
+  default_prompt: "使用 $browser-to-pages 将当前网页或指定章节批量导入到指定 GPT Pages 父页面，保留代码格式，并将图片上传为附件。"

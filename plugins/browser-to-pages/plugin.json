@@ -1,0 +1,28 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "browser-to-pages",
+  "version": "0.1.0",
+  "description": "Import browser articles and course chapters into GPT Pages, preserving editable code and uploading images as attachments.",
+  "author": {"name": "createagle", "url": "https://github.com/createagle"},
+  "homepage": "https://github.com/createagle/gpt-plugin/tree/main/plugins/browser-to-pages",
+  "repository": "https://github.com/createagle/gpt-plugin",
+  "keywords": ["browser", "pages", "import", "courses"],
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/setup/SKILL.md",
+      "interface": {
+        "displayName": "网页导入 Pages",
+        "shortDescription": "保留代码与图片附件，支持批量和续传",
+        "longDescription": "通过当前运行环境可用的 Browser 和 Pages 工具，把文章或指定课程章节导入 Pages 子页面，保留正文与代码格式，并把图片上传为附件。包含可在云端或本地任务环境运行的辅助脚本，不包含独立浏览器服务或 Pages 凭据。手机端使用取决于工作区插件导入、启用状态和当前会话的工具能力；不会自动继承电脑浏览器登录态。",
+        "developerName": "createagle",
+        "category": "Productivity",
+        "capabilities": ["Read", "Write"],
+        "websiteURL": "https://github.com/createagle/gpt-plugin",
+        "supportURL": "https://github.com/createagle/gpt-plugin/issues",
+        "defaultPrompt": ["把这个网页导入指定 Pages 父页面，保留代码，图片上传为附件。", "继续上次的课程导入，跳过已经完成的章节。"],
+        "composerIcon": "./assets/icon.svg",
+        "logo": "./assets/icon.svg"
+      }
+    }
+  }
+}
